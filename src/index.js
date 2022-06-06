@@ -161,7 +161,7 @@ class Game extends React.Component {
 function checkForEndOfGame(squares) {
   const endConditions = {
     draw: false,
-    winner: false,
+    winner: null,
     winningMoves: []
   };
 
@@ -189,8 +189,8 @@ function calculateWinnerAndMoves(squares) {
   ];
 
   const winnerAndMoves = {
-    winner: false,
-    winningMoves: false
+    winner: null,
+    winningMoves: []
   };
 
   for (let i = 0; i < lines.length; i++) {
@@ -208,8 +208,8 @@ function checkForDraw(squares) {
     if (squares[i] == null) {
       return false;
     }
-    return true;
   }
+  return true;
 }
 
 // ========================================
